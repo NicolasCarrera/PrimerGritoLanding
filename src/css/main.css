@@ -1,0 +1,197 @@
+@import './base/_reset.css';
+@import './base/_variables.css';
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.25rem;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Hero */
+.hero {
+  padding: var(--spacing-unit);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-unit);
+}
+
+.hero-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-right {
+  text-align: center;
+}
+
+.hero-right h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-right p {
+  margin-bottom: 1rem;
+}
+
+/* Autor */
+.autor {
+  padding: var(--spacing-unit);
+  background-color: #f8f9fa;
+}
+
+.autor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-unit);
+}
+
+.autor-left {
+  text-align: center;
+}
+
+.autor-left h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.autor-left p {
+  margin-bottom: 1rem;
+}
+
+.autor-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reseñas */
+.resenas {
+  padding: var(--spacing-unit);
+}
+
+.resenas h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.resenas-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit);
+}
+
+.resena {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.resena p {
+  margin-bottom: 0.5rem;
+}
+
+.resena cite {
+  font-style: italic;
+}
+
+/* Compra */
+.compra {
+  padding: var(--spacing-unit);
+  text-align: center;
+}
+
+.compra-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-unit);
+}
+
+.compra img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+.footer {
+  padding: var(--spacing-unit);
+  background-color: #343a40;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-unit);
+}
+
+.social-media {
+  display: flex;
+  gap: var(--spacing-unit);
+}
+
+.social-media a {
+  color: white;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .hero-container,
+  .autor-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero-left,
+  .hero-right,
+  .autor-left,
+  .autor-right {
+    flex: 1;
+  }
+
+  .hero-right,
+  .autor-left {
+    text-align: left;
+  }
+
+  .resenas-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .resena {
+    flex: 1 1 calc(50% - var(--spacing-unit));
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-container p {
+    margin: 0;
+  }
+}

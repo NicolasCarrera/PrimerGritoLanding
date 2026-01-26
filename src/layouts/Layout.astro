@@ -1,0 +1,62 @@
+---
+import "../styles/index.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Primer Grito es una novela histórica ecuatoriana sobre la independencia del Ecuador, donde un amor imposible entre una joven criolla y un joven indígena se entrelaza con revolución, identidad y esperanza."
+    />
+    <meta
+      name="keywords"
+      content="Primer Grito, novela histórica ecuatoriana, independencia del Ecuador, Primer Grito de Independencia, Batalla de Pichincha, novela latinoamericana, Pablo Esteban"
+    />
+    <link rel="canonical" href="https://primergrito.com" />
+    <meta
+      property="og:title"
+      content="Primer Grito | Novela histórica ecuatoriana"
+    />
+    <meta property="og:type" content="book" />
+    <meta
+      property="og:description"
+      content="Primer Grito es una novela histórica ecuatoriana que retrata la independencia del Ecuador (1809–1822) a través del amor imposible entre una joven criolla y un joven indígena, en medio de revolución, identidad y esperanza."
+    />
+    <meta
+      property="og:image"
+      content="https://m.media-amazon.com/images/I/818F3eEqDXL._SL1500_.jpg"
+    />
+    <meta property="og:url" content="https://primergrito.com" />
+    <meta property="og:locale" content="es_EC" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "Primer Grito",
+        "genre": "Novela histórica",
+        "inLanguage": "es",
+        "about": "Independencia del Ecuador",
+        "author": {
+          "@type": "Person",
+          "name": "Pablo Esteban"
+        },
+        "url": "https://www.amazon.com/dp/B0G6L46X5S"
+      }
+    </script>
+
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      Primer Grito | Novela histórica sobre la independencia del Ecuador
+    </title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

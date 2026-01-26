@@ -1,0 +1,166 @@
+<section id="reviews" class="reviews">
+  <h2>Reseñas</h2>
+  <div class="reviews-container">
+    <div class="review">
+      <cite>Bryan Alexander Pulla</cite>
+      <p>
+        "Una novela potente y bien escrita, que logra mostrar el choque entre
+        poder y humanidad sin caer en excesos. Primer Grito incomoda, cuestiona
+        y obliga a reflexionar sobre el origen de muchas desigualdades que aún
+        persisten."
+      </p>
+    </div>
+    <div class="review">
+      <cite>Ana Gabriela Muñoz</cite>
+      <p>
+        "Sentí cada página. La forma en que el autor construye los personajes y
+        los mundos que habitan es profundamente humana. Primer Grito no es solo
+        una novela histórica, es un recordatorio de cómo nacen las heridas y
+        también la conciencia."
+      </p>
+    </div>
+    <div class="review">
+      <cite>Helianna Paulina Poveda</cite>
+      <p>
+        "Primer Grito me llevó directo a la infancia, a esas emociones que uno
+        guarda sin saber por qué. Es una historia dura y hermosa a la vez, que
+        se queda contigo mucho después de cerrar el libro. Leerlo fue mirar de
+        frente una parte de nuestra historia que duele, pero que necesita ser
+        contada."
+      </p>
+    </div>
+    <div class="review">
+      <cite>Emily Carter</cite>
+      <p>
+        "Primer Grito is a deeply moving novel that stays with you long after
+        the final page. Through powerful storytelling and emotional depth, the
+        author captures the pain, innocence, and awakening of a world shaped by
+        silence and inequality. It is a story that feels both intimate and
+        necessary"
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .reviews {
+    padding: 4rem 0;
+    background-image:
+      var(--background-review),
+      linear-gradient(
+        to bottom,
+        var(--color-blue-dark) 0%,
+        var(--color-blue-dark) 40%,
+        var(--color-sand) 100%
+      );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .reviews h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin: 0 0 3rem 0;
+    padding: 0 var(--spacing-unit);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-gold);
+    font-family: var(--font-family-heading);
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .reviews-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+    box-sizing: border-box;
+  }
+
+  .review {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .review:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.80);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .review cite {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    padding: 0;
+    color: var(--color-brown);
+    font-size: clamp(1rem, 1.3vw, 1.1rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .review p {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(0.9rem, 1.1vw, 0.95rem);
+    line-height: 1.7;
+    color: var(--text-color-light-bg);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  @media (min-width: 768px) {
+    .reviews {
+      padding: 5rem 0;
+    }
+
+    .reviews-container {
+      gap: 2.5rem;
+    }
+
+    .review {
+      padding: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .reviews {
+      padding: 6rem 0;
+    }
+
+    .reviews-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    .review {
+      padding: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .reviews-container {
+      gap: 3.5rem;
+    }
+  }
+</style>

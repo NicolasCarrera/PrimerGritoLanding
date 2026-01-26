@@ -1,0 +1,156 @@
+---
+import { Picture } from "astro:assets";
+import author from "../../../assets/images/author-placeholder.png";
+---
+
+<section id="author" class="author">
+  <div class="author-container">
+    <div class="author-left">
+      <h2>Pablo Esteban</h2>
+      <p>
+        Pablo es un autor ecuatoriano interesado en explorar la historia, la
+        identidad y los procesos de transformación social de América Latina a
+        través de la ficción histórica. Su trabajo busca tender puentes entre el
+        pasado y el presente, invitando al lector a reflexionar sobre los
+        orígenes de muchas de las tensiones que aún nos definen.
+      </p>
+      <p>
+        En Primer Grito, combina una investigación rigurosa del periodo
+        independentista con una narrativa influenciada por la tradición
+        literaria latinoamericana, dando especial atención a las voces criollas
+        e indígenas y a los conflictos que emergen cuando estos mundos se
+        encuentran. Para el autor, la literatura es también un espacio de
+        diálogo cultural y memoria viva: una forma de comprender mejor quiénes
+        somos y hacia dónde podemos avanzar como sociedad.
+      </p>
+    </div>
+    <div class="author-right">
+      <Picture src={author} alt="Foto del autor Pablo Esteban" format="webp" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .author {
+    background-color: var(--color-sand);
+    background-image: var(--background-sand);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .author-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-unit);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-unit);
+    box-sizing: border-box;
+  }
+
+  .author-left {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-unit);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .author-left h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-brown);
+    font-family: var(--font-family-heading);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+  }
+
+  .author-left p {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    line-height: 1.6;
+    color: var(--text-color-light-bg);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .author-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .author-right img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  @media (min-width: 768px) {
+    .author-right img {
+      max-width: 400px;
+    }
+
+    .author-left {
+      gap: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .author-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .author-left {
+      width: 50%;
+      flex: 0 1 50%;
+      max-width: 50%;
+      text-align: left;
+      padding: 3rem;
+      gap: 2.5rem;
+    }
+
+    .author-right {
+      width: 50%;
+      flex: 0 1 50%;
+      max-width: 50%;
+    }
+
+    .author-right img {
+      max-width: 500px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .author-right img {
+      max-width: 550px;
+    }
+  }
+</style>

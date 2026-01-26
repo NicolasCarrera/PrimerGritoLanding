@@ -1,0 +1,39 @@
+@import "normalize.css";
+
+:root {
+  /* Color palette */
+  --color-sand: #e6d2a2;
+  --color-blue-dark: #0a2d54;
+  --color-gold: #d4a644;
+  --color-brown: #b8832f;
+
+  /* Text */
+  --text-color-light-bg: #000;
+  --text-color-dark-bg: #ffffff;
+  --text-color-dark: #2a2a2a;
+
+  /* Background colors */
+  --bg-color-light: var(--color-sand);
+  --bg-color-dark: var(--color-blue-dark);
+
+  /* Typography */
+  --font-family-base: Arial, sans-serif;
+  --font-family-heading: Georgia, "Times New Roman", serif;
+
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  /* Spacing */
+  --spacing-unit: 1rem;
+
+  /* Backgrounds image */
+  --background-hero: url("../assets/backgrounds/bg-blue.png");
+  --background-sand: url("../assets/backgrounds/bg-beige.png");
+  --background-review: url("../assets/backgrounds/bg-reviews.png");
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}

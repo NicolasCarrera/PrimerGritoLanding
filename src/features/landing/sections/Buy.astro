@@ -1,0 +1,40 @@
+---
+import { Picture } from "astro:assets";
+import mockup from "../../../assets/images/mockup-placeholder.png";
+import BuyButton from "../../../components/BuyButton.astro";
+---
+
+<section id="buy" class="buy">
+  <div class="buy-container">
+    <Picture
+      src={mockup}
+      alt="Mockup del libro Primer Grito"
+      format="webp"
+      width="500"
+      height="500"
+    />
+    <BuyButton text="Comprar en Amazon" />
+  </div>
+</section>
+
+<style>
+  .buy {
+    padding: 4rem var(--spacing-unit);
+    text-align: center;
+    background-color: var(--color-sand);
+    background-image: var(--background-sand);
+  }
+
+  .buy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .buy img {
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+  }
+</style>

@@ -1,0 +1,66 @@
+<footer class="footer">
+  <div class="footer-container">
+    <p>© 2025 Primer Grito. Todos los derechos reservados.</p>
+    <div class="social-media">
+      <a
+        href="https://www.instagram.com/primergrito.oficial/"
+        aria-label="Instagram">Instagram</a
+      >
+      <a
+        href="https://www.tiktok.com/@fragmentos.primergrito"
+        aria-label="TikTok">TikTok</a
+      >
+      <a
+        href="https://www.youtube.com/channel/UCO7VbwY2f9A5D9FgysuF9yQ"
+        aria-label="YouTube">YouTube</a
+      >
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: 2rem var(--spacing-unit);
+    background-color: var(--color-sand);
+    background-image: var(--background-sand);
+    color: var(--text-color-light-bg);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+  }
+
+  .social-media {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .social-media a {
+    color: var(--text-color-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .social-media a:hover {
+    color: var(--color-brown);
+  }
+
+  @media (min-width: 1024px) {
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-container p {
+      margin: 0;
+    }
+  }
+</style>

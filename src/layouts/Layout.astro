@@ -1,5 +1,7 @@
 ---
 import "../styles/index.css";
+const isProd = import.meta.env.PROD;
+const GA_ID = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <!doctype html>
@@ -52,6 +54,24 @@ import "../styles/index.css";
     </script>
 
     <meta name="generator" content={Astro.generator} />
+
+
+    {
+      isProd && GA_ID && (
+        <>
+          <!-- Google tag (gtag.js) -->
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+          <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', "{GA_ID}");
+          </script>
+        </>
+      )
+    }
+
     <title>
       Primer Grito | Novela histórica sobre la independencia del Ecuador
     </title>
